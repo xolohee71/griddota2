@@ -1,0 +1,334 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'AlbertusMedium';
+    src: url(./font/Albertus\ Medium\ Regular\ font.ttf);
+}
+
+@font-face{
+    font-family: 'HypatiaSansPro-Regular';
+    src: url(./font/HypatiaSansPro-Regular.otf);
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* background: url(https://act.hoyoverse.com/puzzle/hk4e/pz_wY19_dy4do/resource/puzzle/2023/09/21/450a9c73cfd6797976a4384e786b059e_8194795802188472466.png?x-oss-process=image/format,webp/quality,Q_90) no-repeat; */
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+}
+
+.grid-1{
+    display: grid;
+    grid-template-columns: repeat(8,100px);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 10px;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 10px;
+}
+
+.nav{
+    justify-content:left;
+    padding: 1%;
+    grid-column: 1/6;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+.container video{
+    grid-column: 1/span 10;
+    grid-row: 1/span 4;
+    opacity: .5;
+    object-fit: cover;
+    width: 100%;
+    height: 50rem;
+}
+
+.img-nav{
+    width: 150px;
+    grid-column: 1/3;
+    grid-row: 2/span 3;
+    justify-self: center;
+    align-self: center;
+}
+
+a,a:visited,a:focus{
+    text-decoration: none;
+    font-family: 'AlbertusMedium';
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: #fff;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2/span 3;
+}
+
+.nav a:nth-child(2){
+    grid-column: 3/4;
+    grid-row: 2/span 3;
+}
+
+.nav a:nth-child(3){
+    grid-column: 4/5;
+
+}
+
+.nav a:nth-child(4){
+    grid-column: 5/6;
+
+}
+
+.nav a:nth-child(5){
+    grid-column: 6/7;
+
+}
+
+.nav-button{
+    justify-content: right;
+    align-items: center;
+    grid-column: 6/11;
+    grid-row: 1/2;
+    z-index: 1;
+}
+
+/* .nav-button a:nth-child(2){
+    grid-column: 6/span 2;
+    grid-row: 2/5;
+} */
+
+a:nth-child(2) button{
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: #fff;
+    border: 3px solid rgba(255,255,255,.3137254902);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    font-family: 'HypatiaSansPro-Regular';
+    font-weight: 900;
+}
+
+a:nth-child(2) button img{
+    width: 13%;
+}
+
+div a:nth-child(2){
+    grid-column: 4/6;
+    grid-row: 2/5;
+}
+
+.nav-button .text-login{
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+
+.text-login a{
+    font-size: 1rem;
+    text-align: right;
+}
+
+.text-login a:nth-child(1){
+    display: block;
+}
+
+.text-login a:nth-child(2){
+    display: block;
+}
+
+.title{
+    grid-column: 2/7;
+    grid-row: 2/4;
+    z-index: 1;
+}
+
+.title .mainquote{
+    color: #fff;
+    font-family: 'AlbertusMedium';
+    font-size: 4rem;
+    letter-spacing: 0.2vw;
+}
+
+.title .smallquote{
+    color: rgba(255,255,255,.5647058824);
+    font-family: 'HypatiaSansPro-Regular';
+    font-size: 1.5rem;
+    letter-spacing: 0.2vw;
+    margin-bottom: 1rem;
+}
+
+.bar{
+    width: 80px;
+    height: 3px;
+    min-height: 3px;
+    background-color: #ff6046;
+    border-radius: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.title a:nth-child(4) button{
+    width: 18rem;
+    height: 5rem;
+    background: none;
+    color: #fff;
+    border: 3px solid rgba(255,255,255,.3137254902);
+    border-radius: 5px;
+    /* font-size: 1.3rem; */
+    letter-spacing: 0.2rem;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(5,1fr);
+    /* gap: 10px; */
+    text-transform: uppercase;
+    font-family: 'HypatiaSansPro-Regular';
+    font-weight: 900;
+}
+
+.title a:nth-child(4) button img{
+    justify-self: center;
+    align-self: center;
+    grid-column: 1/2;
+    grid-row: 1/3 ;
+    width: 57%;
+    height: 57%;
+}
+
+.title a:nth-child(4) button div:nth-child(2){
+    justify-self: left;
+    align-self: center;
+    grid-column: 2/6;
+    grid-row: 1/2 ;
+    font-size: 1.5rem;
+}
+.title a:nth-child(4) button div:nth-child(3){
+    justify-self: left;
+    align-self: center;
+    grid-column: 2/6;
+    grid-row: 2/3 ;
+    color: #858585;
+    text-shadow: 2px 2px 3px #000;
+}
+
+.img-nav-mb{
+    display: none;
+}
+
+@media only screen and (max-width: 1100px){
+    body{
+        background-color: #000;
+    }
+    .container{
+        width: 100%;
+    }
+
+    .grid-1{
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap: 2vw;
+    }
+    .grid-2{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap: 2vw;
+    }
+    .img-nav{
+        display: none;
+    }
+    .img-nav-mb{
+        display: inline;
+        width: 5vw;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: center;
+    }
+
+    a,a:visited,a:focus{
+        font-size: 2.5vw;
+    }
+
+    .title .mainquote{
+        font-size:7vw;
+    }
+
+    .title .smallquote{
+        font-size: 5vw
+    }
+
+    a:nth-child(2) button{
+        display: none;
+    }
+
+    .nav-button{
+        padding: 5%;
+    }
+
+    .nav-button .text-login{
+        grid-column: 4/6;
+        grid-row: 1/2;
+    }
+    .text-login a{
+        font-size: 2.5vw;
+    }
+    a,a:visited,a:focus{
+        grid-row: 1/2;
+    }
+
+    .nav a:nth-child(2){
+        grid-row: 1/span 1;
+    }
+
+    .nav a:nth-child(3){
+        grid-column: 3/4;
+    }
+    .nav a:nth-child(4){
+        grid-column: 4/5;
+    }
+    .nav a:nth-child(5){
+        grid-column: 5/6;
+    }
+
+    .nav{
+        padding: 5%;
+    }
+
+    .title{
+        grid-row: 1/2;
+        justify-self:self-start;
+        align-self: self-end;
+        margin-top: 20vw;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .title{
+        grid-row:2/3;
+        margin: 0;
+    }
+
+    .img-nav-mb{
+        display: inline;
+        width: 5vw;
+        grid-row: 1/2;
+        justify-self: center;
+        align-self: center;
+    }
+}
