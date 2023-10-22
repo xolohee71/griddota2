@@ -11,6 +11,12 @@
         <video autoplay preload="auto" loop playsinline>
             <source type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/homepage/dota_montage_webm.webm">
         </video>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var video = document.getElementById("video");
+                video.play();
+            });
+        </script>
         <div class="nav grid-1">
             <img class="img-nav" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_horiz.png" alt="">
             <img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png" alt="" class="img-nav-mb">
